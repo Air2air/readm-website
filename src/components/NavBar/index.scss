@@ -1,0 +1,57 @@
+@import '../../scss/variables';
+$font-navbar: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+$navbar-height: 70px;
+.outer {
+  height: $navbar-height;
+  position: relative;
+  margin: 0;
+  .inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: $navbar-height;
+    .header-logo {
+      width: 200px;
+    }
+    a {
+      font-family: $font-navbar;
+      font-size: 1.4em;
+      height: $navbar-height;
+      line-height: $navbar-height * 1.3;
+      padding: 0 30px;
+    }
+  }
+}
+
+/*---------- Colors-----------*/
+
+$navbar-color: darken($base-color, 10%);
+$navbar-hover-color: lighten($navbar-color, 5%);
+$text-navbar: white;
+.outer {
+  background: $navbar-color;
+  .inner {
+    color: $text-navbar;
+    a.nav-link {
+      //background: gold;
+      color: $text-navbar;
+      text-shadow: 0 0 6px darken($navbar-color, 30%);
+      &:hover {
+        background: $navbar-hover-color;
+      }
+    }
+  }
+}
+
+/*---------- Colors-----------*/
+
+// .outer {
+//   background: red;
+//   .inner {
+//     background: gold;
+//     a.nav-link {
+//       background: blue;
+//     }
+//   }
+// }
