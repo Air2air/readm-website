@@ -1,0 +1,25 @@
+$demo-height: 400px;
+
+.demo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: $demo-height;
+  background: #fff;
+  padding: 20px 80px;
+
+  .speakerphrase-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // background: red;
+  }
+}
+
+// .demo-wrapper {
+//   background: gold;
+//   .speakerphrase-section {
+//     background: red;
+//   }
+// }

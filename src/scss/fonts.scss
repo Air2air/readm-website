@@ -1,19 +1,19 @@
 @import 'variables';
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i|Roboto|Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Martel|Martel+Condensed');
 
-$font-title: 'Roboto Condensed', Arial, Helvetica, sans-serif;
-$font-subtitle: 'Roboto', Arial, Helvetica, sans-serif;
-$font-text: 'Merriweather', serif;
+$font-title: 'Martel', serif;
+$font-subtitle: 'Martel', serif;
+$font-text: 'Martel', serif;
 
 @mixin font-title {
-  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  font-family: 'Martel', serif;
 }
 @mixin font-subtitle {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Martel', serif;
 }
 @mixin font-text {
-  font-family: 'Merriweather', serif;
+  font-family: 'Martel', serif;
 }
 
 $navbar-height: 60px;

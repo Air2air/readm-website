@@ -1,0 +1,32 @@
+@import '../../scss/variables';
+
+$speakerphrase-height: 70px;
+$word-size: 1.4em;
+
+.speakerphrase-wrapper {
+  height: $speakerphrase-height;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-bottom: 2px solid $border-color;
+  // background: red;
+  .speakerphrase-textline {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .speakerphrase-word {
+      font-size: $word-size;
+      color: #444;
+      padding: 0 4px;
+      border-radius: $word-size;
+    }
+  }
+  .speakerphrase-control-row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

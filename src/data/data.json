@@ -1,0 +1,208 @@
+module.exports = {
+    pathPrefix: `/gatsby-starter-hyperspace/`, // This path is subpath of your hosting https://domain/portfolio
+    siteMetadata: {
+      appwindow: {
+        title: 'App',
+        instructions: [
+          'Read It Well, Say It Better.',
+          'A Confidence Building Unicorn.',
+        ],
+        buttons: {
+          app: {
+            text: 'Start Now',
+            href: '//readm-project.firebaseapp.com/',
+          },
+        },
+        speakerphrase: {
+          line1: {
+            text: 'Read It Well',
+          },
+          line2: {
+            text: 'Read It Well',
+          },
+          line3: {
+            text: 'Read It Well',
+          },
+          line4: {
+            text: 'Read It Well',
+          },
+        },
+      },
+      welcome: {
+        title: 'ReadM',
+        slogan: [
+          'Read It Well, Say It Better.',
+          'A Confidence Building Unicorn.',
+        ],
+        buttons: {
+          app: {
+            text: 'Start Now',
+            href: '//readm-project.firebaseapp.com/',
+          },
+          who: {
+            text: 'Who WE Are',
+            href: '#one',
+          },
+        },
+      },
+      who: {
+        title: 'Who WE Are',
+        founders: [
+          {
+            name: 'Adi Erez',
+            details: ['Co-Founder, Law Degree (LL.B)'],
+            link: {
+              href: '',
+              title: '',
+            },
+          },
+          {
+            name: 'Oren Farhi',
+            details: [
+              'Co-Founder, Senior Software Engineer & Front End Architect',
+            ],
+            link: {
+              href: '//www.apress.com/us/book/9781484226193',
+              title: 'Reactive Programming With Angular & NgRx',
+            },
+          },
+        ],
+      },
+      you: {
+        title: 'Who YOU Are',
+        features: [
+          {
+            title: 'ELL Students & their parents',
+            description:
+              'Kindergarten through 5th graders that recently relocated to the United States or another English speaking country, or are about to relocate and need to learn, speak and practice English',
+            icon: 'code',
+            linkText: '',
+            linkHref: '',
+          },
+          {
+            title: 'Kids Learning To Read English',
+            description:
+              'Children from pre-Kindergarten to 2nd grade who are learning to master reading out loud. ReadM is the most effective solution to motivate, teach and practice',
+            icon: 'lock',
+            linkText: '',
+            linkHref: '',
+          },
+          {
+            title: 'Authors & Content Creators',
+            description:
+              'ReadM is a platform for those seeking to publish books.  It allows their content to be tested and their books to be read by children and adults that are using our platform. What’s more, they can team up with graphic designers to create the best experience possible.',
+            icon: 'diamond',
+            linkText: '',
+            linkHref: '',
+          },
+          {
+            title: 'Schools, Teachers & Educators',
+            description: `ReadM is an educational application and platform for practicing reading in a fun, creative way. Get real-time statistics and reports analyzing your progress and store your momentum. 
+  
+  ReadM is also a platform for content publishing, allowing students to create and publish their own creations. 
+  `,
+            icon: 'cog',
+            linkText: '',
+            linkHref: '',
+          },
+          {
+            title: 'Advertising',
+            description:
+              'ReadM is an advertising platform for any business seeking to gain exposure and market share of the immense educational marketplace.',
+            icon: 'desktop',
+            linkText: 'Interested In Collaboration?',
+            linkHref: '#contact',
+          },
+          {
+            title: 'English Learners',
+            description:
+              'You are an individual who wants to practice English Speaking, English Accent, Fluency and interested in building Confidence',
+            icon: 'chain',
+            linkText: 'Invite Me To Beta',
+            linkHref: '#invite',
+          },
+        ],
+      },
+      what: {
+        title: 'What is ReadM?',
+        description: `
+        ReadM is a realtime reading feedback app, running on the Chrome Browser (Android, Chromebook, Mac or PC). It provides real time feedback to readers using speech recognition, while creating a  positive and fun experience. It offers books to practice English. ReadM allows readers, their parents and teachers the ability to monitor and track their progress in real time as well as over time. 
+      `,
+        more: 'Learn More',
+        moreLink: '/generic',
+        features: [
+          {
+            title: 'Practice Reading',
+            description:
+              'Focus on reading aloud while  receiving real time feedback.',
+            img: 'reading',
+            icon: 'code',
+          },
+          {
+            title: 'A Platform For Creators',
+            description:
+              'Motivate creativity in writing books, dialogs and articles while reaching your target  audience.',
+            img: 'editor',
+            icon: 'lock',
+          },
+          {
+            title: 'Reports & Statistics',
+            description: `Provides statistics and reports on the reader's progress, including time, success, strengths and weaknesses.`,
+            img: 'stats',
+            icon: 'diamond',
+          },
+          {
+            title: 'Immersive Experience',
+            description: `With various types of graphics, the reader has an immersive
+              experience.`,
+            img: 'feedback',
+            icon: 'cog',
+          },
+          {
+            title: 'Personal Customisation',
+            description: `Personal preferences allows each user to customize colors, background and avatars,  allowing the reader to tailor make the app towards his or her personal tastes and likes.`,
+            img: 'customise',
+            icon: 'desktop',
+          },
+          {
+            title: 'And Much More...',
+            description: `Mobile & tablet support, Offline support (coming soon), more Languages, ESL (English as A Second Language) fit. Promotes financial education, social skills`,
+            img: 'mobile',
+            icon: 'chain',
+          },
+        ],
+      },
+    },
+    plugins: [
+      'gatsby-plugin-react-helmet',
+      {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: 'Readm',
+          short_name: 'readm',
+          start_url: '/',
+          background_color: '#663399',
+          theme_color: '#663399',
+          display: 'standalone',
+          icon: 'src/assets/img/book.png', // This path is relative to the root of the site.
+        },
+      },
+      {
+        resolve: `gatsby-plugin-google-analytics`,
+        options: {
+          trackingId: 'UA-155066057-1',
+        },
+      },
+      'gatsby-plugin-sass',
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          path: `${__dirname}/src/markdown-pages`,
+          name: `markdown-pages`,
+        },
+      },
+      `gatsby-transformer-remark`,
+      'gatsby-plugin-offline',
+    ],
+  };
+  

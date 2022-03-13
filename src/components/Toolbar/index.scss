@@ -1,0 +1,19 @@
+@import '../../scss/variables';
+
+$toolbar-height: 90px;
+
+.toolbar-wrapper {
+  height: $toolbar-height;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  // background: red;
+
+  .toolbar-controls {
+    height: $toolbar-height;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,35 @@
+@import 'variables';
+
+$control-size: 60px;
+
+/*---------------- Controls --------------- */
+.control {
+  height: $control-size;
+  width: $control-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15%;
+  box-sizing: border-box;
+  cursor: pointer;
+  img.svg {
+    height: $control-size * .7;
+    width: $control-size * .7;
+  }
+}
+.control {
+  color: $control-icon-color;
+  background: $control-background-color;
+  border: 2px solid $white;
+  transition: all 0.3s;
+  &:hover {
+    transition: all 0.2s;
+    color: $control-icon-color-hover;
+    border: 2px solid $control-border-color-hover;
+  }
+  &:active {
+    color: $white;
+    background: $control-icon-color-hover;
+    border: 2px solid $control-icon-color;
+  }
+}
