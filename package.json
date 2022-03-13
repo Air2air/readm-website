@@ -1,5 +1,6 @@
 {
-  "name": "sustainablefuelcycle",
+  "name": "readm_website",
+  "homepage": "https://www.dunningmarketing.com/readm_website",
   "private": true,
   "version": "1.0.0",
   "engines": {
@@ -45,7 +46,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js"
