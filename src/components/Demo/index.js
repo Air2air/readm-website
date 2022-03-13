@@ -1,6 +1,10 @@
-import React from 'react'
+import {useState} from 'react'
+import {FaArrowLeft, FaArrowRight, FaMinus, FaPlus} from 'react-icons/fa'
+import rabbit from '../../assets/images/rabbit.svg'
+import turtle from '../../assets/images/turtle.svg'
 import SpeakerPhrase from '../SpeakerPhrase'
-import Toolbar from '../Toolbar'
+import '../../scss/controls.scss'
+import './toolbar.scss'
 import './index.scss'
 
 const speakerphrase = [
@@ -18,17 +22,61 @@ const speakerphrase = [
   },
 ]
 
-const Demo = () => (
-  <>
-    <section className="demo-wrapper">
-      <Toolbar />
-      <div className="speakerphrase-section">
-        {speakerphrase.map(item => (
-          <SpeakerPhrase content={item.content} />
-        ))}
+const Demo = () => {
+  const [fontSize, setFontSize] = useState(22)
+
+  return (
+    <>
+      <div className="demo-wrapper" style={{fontSize: `${fontSize}px`}}>
+        <div className="toolbar-wrapper">
+          <button
+            type="button"
+            className="control"
+            onClick={() => setFontSize(fontSize - 1)}
+          >
+            <FaArrowLeft className="icon" size={32} />
+          </button>
+
+          <div className="toolbar-inner">
+            <button
+              type="button"
+              className="control"
+              onClick={() => setFontSize(fontSize - 1)}
+            >
+              <FaMinus className="icon" size={32} />
+            </button>
+            <button
+              type="button"
+              className="control"
+              onClick={() => setFontSize(fontSize + 1)}
+            >
+              <FaPlus className="icon" size={32} />
+            </button>
+            <div className="control">
+              <img src={turtle} className="svg-icon" alt="Slow" />
+            </div>
+            <div className="control">
+              <img src={rabbit} className="svg-icon" alt="Fast" />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            className="control"
+            onClick={() => setFontSize(fontSize - 1)}
+          >
+            <FaArrowRight className="icon" size={32} />
+          </button>
+        </div>
+
+        <div className="speakerphrase-section">
+          {speakerphrase.map(item => (
+            <SpeakerPhrase content={item.content} />
+          ))}
+        </div>
       </div>
-    </section>
-  </>
-)
+    </>
+  )
+}
 
 export default Demo

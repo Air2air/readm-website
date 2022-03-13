@@ -5,7 +5,7 @@ $contrast-color: $base-color-light;
 $accent-color: #00bff3;
 $white: #ffffff;
 $black: #000000;
-$border-color:#555;
+$border-color: #555;
 
 /* ------- RESULTS PANELS ---------*/
 
@@ -17,7 +17,7 @@ $panel-dark-hover-color: darken($panel-dark-color, 2%);
 /* ------- Classes ---------*/
 
 $background-color: white;
-$border-color: lighten($base-color, 10%);
+$border-color: #cdcdcd;
 
 /* ------- Buttons ---------*/
 
@@ -28,10 +28,11 @@ $btn-default-color: $base-color; //lighten(desaturate($base-color, 30%), 15%);
 $control-color: $white;
 $control-icon-color: #888;
 $control-icon-color-hover: #1967d2;
-$control-border-color:$border-color;
-$control-border-color-hover:rgb(175, 175, 175);
+$control-border-color: $border-color;
+$control-border-color-hover: #1967d2;
 $control-background-color: $white;
-$control-background-color-hover: $white;
+$control-background-color-hover: #bdd6fa;
+$control-background-color-focus: #1967d2;
 
 /* ------- HEADINGS ---------*/
 

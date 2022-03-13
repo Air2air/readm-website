@@ -1,4 +1,4 @@
-$demo-height: 400px;
+$demo-height: 500px;
 
 .demo-wrapper {
   display: flex;
@@ -8,7 +8,6 @@ $demo-height: 400px;
   height: $demo-height;
   background: #fff;
   padding: 20px 80px;
-
   .speakerphrase-section {
     width: 100%;
     display: flex;
@@ -18,7 +17,7 @@ $demo-height: 400px;
 }
 
 // .demo-wrapper {
-//   background: gold;
+//   background: blue;
 //   .speakerphrase-section {
 //     background: red;
 //   }

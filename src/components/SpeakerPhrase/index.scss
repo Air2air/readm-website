@@ -1,32 +1,93 @@
 @import '../../scss/variables';
 
-$speakerphrase-height: 70px;
+$speakerphrase-height: 60px;
 $word-size: 1.4em;
 
 .speakerphrase-wrapper {
-  height: $speakerphrase-height;
+  min-height: $speakerphrase-height;
+  height: auto;
   width: 100%;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
   border-bottom: 2px solid $border-color;
-  // background: red;
   .speakerphrase-textline {
+    min-height: $speakerphrase-height;
+    width: 80%;
+    max-width: 80%;
+    padding-left: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
     .speakerphrase-word {
-      font-size: $word-size;
-      color: #444;
-      padding: 0 4px;
-      border-radius: $word-size;
+      // min-height: $word-size;
+      display: flex;
+      align-items: center;
+      padding: 8px 3px;
+      margin: 0 2px;
+      border-radius: 4px;
+      cursor: pointer;
     }
   }
   .speakerphrase-control-row {
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }
 }
+
+.speakerphrase-wrapper {
+  transition: all 0.3s;
+  .speakerphrase-textline {
+    .speakerphrase-word {
+      transform:scale(1);
+      &:hover {
+        transform:scale(1.08);
+      }
+    }
+  }
+  .speakerphrase-control-row {
+
+  }
+}
+
+.speakerphrase-wrapper {
+  border-bottom: 2px solid $border-color;
+  &:hover {
+    background: #eeeeee;
+  }
+  .speakerphrase-textline {
+    .speakerphrase-word {
+      color: #444;
+      background: $control-background-color;
+      transition: all 0.3s;
+      &:hover {
+        transition: all 0.2s;
+        color: $control-icon-color-hover;
+      }
+      &:active {
+        color: $white;
+        background: $control-icon-color-hover;
+      }
+    }
+  }
+  .speakerphrase-control-row {
+  }
+}
+
+// .speakerphrase-wrapper {
+//   background: red;
+//   .speakerphrase-textline {
+//     background: gold;
+//     .speakerphrase-word {
+//       background: green;
+//     }
+//   }
+//   .speakerphrase-control-row {
+//     background: lightblue;
+//   }
+// }

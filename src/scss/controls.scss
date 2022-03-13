@@ -13,23 +13,24 @@ $control-size: 60px;
   box-sizing: border-box;
   cursor: pointer;
   img.svg-icon {
-    height: $control-size * .7;
-    width: $control-size * .7;
+    height: $control-size * 0.7;
+    width: $control-size * 0.7;
   }
 }
 .control {
   color: $control-icon-color;
   background: $control-background-color;
-  border: 2px solid $white;
-  transition: all 0.3s;
+  transition: all 0.2s;
   &:hover {
-    transition: all 0.2s;
     color: $control-icon-color-hover;
-    border: 2px solid $control-border-color-hover;
+    background: $control-background-color-hover;
   }
   &:active {
     color: $white;
-    background: $control-icon-color-hover;
-    border: 2px solid $control-icon-color;
+    background: $control-background-color-focus;
   }
+}
+
+button.control {
+  border: none;
 }

@@ -7,9 +7,13 @@ $toolbar-height: 90px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  // background: red;
-
+  justify-content: space-between;
+  .toolbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+  }
   .toolbar-controls {
     height: $toolbar-height;
     display: flex;
