@@ -11,6 +11,17 @@ html {
 }
 
 
+html,
+body {
+  font-family: $font-sans-serif;
+  color: $text-color;
+  font-weight: normal;
+  line-height: 1.8em;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
 // .container-fluid,
 // .container {
 //   flex: 1 0 auto;

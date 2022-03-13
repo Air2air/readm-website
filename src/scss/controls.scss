@@ -21,11 +21,13 @@ $control-size: 60px;
   color: $control-icon-color;
   background: $control-background-color;
   transition: all 0.2s;
+  transform: scale(1);
   &:hover {
     color: $control-icon-color-hover;
-    background: $control-background-color-hover;
+    background: $background-color-hover;
   }
   &:active {
+    transform: scale(1.05);
     color: $white;
     background: $control-background-color-focus;
   }

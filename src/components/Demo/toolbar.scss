@@ -11,8 +11,14 @@ $toolbar-height: 90px;
   .toolbar-inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: auto;
+  }
+  .toolbar-group {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 300px;
+    margin:0 20px;
   }
   .toolbar-controls {
     height: $toolbar-height;

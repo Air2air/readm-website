@@ -5,7 +5,7 @@ import turtle from '../../assets/images/turtle.svg'
 import SpeakerPhrase from '../SpeakerPhrase'
 import '../../scss/controls.scss'
 import './toolbar.scss'
-import './index.scss'
+import './styles.scss'
 
 const speakerphrase = [
   {
@@ -38,25 +38,30 @@ const Demo = () => {
           </button>
 
           <div className="toolbar-inner">
-            <button
-              type="button"
-              className="control"
-              onClick={() => setFontSize(fontSize - 1)}
-            >
-              <FaMinus className="icon" size={32} />
-            </button>
-            <button
-              type="button"
-              className="control"
-              onClick={() => setFontSize(fontSize + 1)}
-            >
-              <FaPlus className="icon" size={32} />
-            </button>
-            <div className="control">
-              <img src={turtle} className="svg-icon" alt="Slow" />
+            <div className="toolbar-group">
+              <button
+                type="button"
+                className="control"
+                onClick={() => setFontSize(fontSize - 1)}
+              >
+                <FaMinus className="icon" size={32} />
+              </button>
+              <button
+                type="button"
+                className="control"
+                onClick={() => setFontSize(fontSize + 1)}
+              >
+                <FaPlus className="icon" size={32} />
+              </button>
             </div>
-            <div className="control">
-              <img src={rabbit} className="svg-icon" alt="Fast" />
+
+            <div className="toolbar-group">
+              <div className="control">
+                <img src={turtle} className="svg-icon" alt="Slow" />
+              </div>
+              <div className="control">
+                <img src={rabbit} className="svg-icon" alt="Fast" />
+              </div>
             </div>
           </div>
 

@@ -22,7 +22,8 @@ $word-size: 1.4em;
     justify-content: flex-start;
     flex-wrap: wrap;
     .speakerphrase-word {
-      // min-height: $word-size;
+      font-family: $font-serif;
+      font-weight: 700;
       display: flex;
       align-items: center;
       padding: 8px 3px;
@@ -37,6 +38,9 @@ $word-size: 1.4em;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    .control {
+      margin-right: 7px;
+    }
   }
 }
 
@@ -44,29 +48,25 @@ $word-size: 1.4em;
   transition: all 0.3s;
   .speakerphrase-textline {
     .speakerphrase-word {
-      transform:scale(1);
+      transform: scale(1);
       &:hover {
-        transform:scale(1.08);
+        transform: scale(1.08);
       }
     }
-  }
-  .speakerphrase-control-row {
-
   }
 }
 
 .speakerphrase-wrapper {
   border-bottom: 2px solid $border-color;
-  &:hover {
-    background: #eeeeee;
-  }
   .speakerphrase-textline {
+ 
+    &:hover .speakerphrase-word:not(:hover) {
+      background: $background-color-hover;
+    }
     .speakerphrase-word {
-      color: #444;
-      background: $control-background-color;
+      color: #555;
       transition: all 0.3s;
       &:hover {
-        transition: all 0.2s;
         color: $control-icon-color-hover;
       }
       &:active {

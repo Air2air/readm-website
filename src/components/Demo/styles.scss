@@ -1,3 +1,5 @@
+@import '../../scss/_variables.scss';
+
 $demo-height: 500px;
 
 .demo-wrapper {
@@ -6,8 +8,7 @@ $demo-height: 500px;
   align-items: center;
   justify-content: center;
   height: $demo-height;
-  background: #fff;
-  padding: 20px 80px;
+  padding: 20px 20px;
   .speakerphrase-section {
     width: 100%;
     display: flex;
