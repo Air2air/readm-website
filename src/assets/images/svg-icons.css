@@ -1,0 +1,23 @@
+/*---------------- Controls --------------- */
+
+.svg-icon {
+  height: 60px;
+  width: 60px;
+}
+
+.fill {
+  fill: gray;
+  background: #fff;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+}
+/* .control:hover {
+    transition: all 0.2s;
+    color: $control-icon-color-hover;
+    border: 2px solid $control-border-color-hover;
+  }
+  &:active {
+    color: $white;
+    background: $control-icon-color-hover;
+    border: 2px solid $control-icon-color;
+  } */
