@@ -6,14 +6,15 @@ $card-row-height: 160px;
   height: $card-row-height;
   padding: 0;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   .card-row-endcap {
     position: absolute;
     height: $card-row-height;
     width: 110px;
-    padding:0;
+    padding: 0;
     display: flex;
     align-items: center;
+    border-radius: 5px;
     &.left {
       left: 0;
       justify-content: flex-start;
@@ -25,7 +26,7 @@ $card-row-height: 160px;
   }
   .card-row-inner {
     height: $card-row-height;
-    width: 100%;
+    // width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -35,17 +36,60 @@ $card-row-height: 160px;
   }
 }
 
+.card-row-outer {
+  transition: all 0.3s;
+  .card-row-endcap {
+    transition: all 0.3s;
+    &:hover {
+      transition: all 0.3s;
+      .arrow {
+        transition: all 0.3s;
+        transform: scale(1.08);
+      }
+    }
+    &.left {
+      transition: all 0.3s;
+    }
+    &.right {
+      transition: all 0.3s;
+    }
+  }
+}
+
 /*---------- Colors-----------*/
 
 .card-row-outer {
   // background: #fff;
   .card-row-inner {
     .card-row-endcap {
+      .arrow {
+        color: $control-icon-color;
+      }
       &.left {
-        background: linear-gradient(90deg, #ffffff 50%,#ffffff00);
+        background: linear-gradient(90deg, #ffffff 50%, #ffffff00);
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            $background-color-hover 50%,
+            #ffffff00
+          );
+          .arrow {
+            color: $control-icon-color-hover;
+          }
+        }
       }
       &.right {
-        background: linear-gradient(90deg, #ffffff00, #ffffff  50% );
+        background: linear-gradient(90deg, #ffffff00, #ffffff 50%);
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            #ffffff00,
+            $background-color-hover 50%
+          );
+          .arrow {
+            color: $control-icon-color-hover;
+          }
+        }
       }
       .arrow {
         border: none;

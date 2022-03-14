@@ -31,31 +31,29 @@ const Demo = () => {
       <Cards />
       <div className="demo-wrapper" style={{fontSize: `${fontSize}px`}}>
         <div className="toolbar-wrapper">
-          <div className="toolbar-inner">
-            <div className="toolbar-group">
-              <button
-                type="button"
-                className="control"
-                onClick={() => setFontSize(fontSize - 1)}
-              >
-                <FaMinus className="icon" size={32} />
-              </button>
-              <button
-                type="button"
-                className="control"
-                onClick={() => setFontSize(fontSize + 1)}
-              >
-                <FaPlus className="icon" size={32} />
-              </button>
-            </div>
+          <div className="toolbar-group left">
+            <button
+              type="button"
+              className="control"
+              onClick={() => setFontSize(fontSize - 1)}
+            >
+              <FaMinus className="icon" size={32} />
+            </button>
+            <button
+              type="button"
+              className="control"
+              onClick={() => setFontSize(fontSize + 1)}
+            >
+              <FaPlus className="icon" size={32} />
+            </button>
+          </div>
 
-            <div className="toolbar-group">
-              <div className="control">
-                <img src={turtle} className="svg-icon" alt="Slow" />
-              </div>
-              <div className="control">
-                <img src={rabbit} className="svg-icon" alt="Fast" />
-              </div>
+          <div className="toolbar-group right">
+            <div className="control">
+              <img src={turtle} className="svg-icon" alt="Slow" />
+            </div>
+            <div className="control">
+              <img src={rabbit} className="svg-icon" alt="Fast" />
             </div>
           </div>
         </div>

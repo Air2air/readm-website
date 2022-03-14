@@ -1,6 +1,6 @@
 @import '../../scss/variables';
 
-$toolbar-height: 90px;
+$toolbar-height: 70px;
 
 .toolbar-wrapper {
   height: $toolbar-height;
@@ -8,22 +8,26 @@ $toolbar-height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .toolbar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: auto;
-  }
   .toolbar-group {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin:0 20px;
-  }
-  .toolbar-controls {
-    height: $toolbar-height;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    &.left {
+      .control {
+        margin-left: 7px;
+      }
+    }
+    &.right {
+      .control {
+        margin-right: 7px;
+      }
+    }
   }
 }
+
+// .toolbar-wrapper {
+//   background: green;
+//   .toolbar-group {
+
+//   }
+// }
