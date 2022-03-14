@@ -1,5 +1,6 @@
 import {useState} from 'react'
-import {FaArrowLeft, FaArrowRight, FaMinus, FaPlus} from 'react-icons/fa'
+import {FaMinus, FaPlus} from 'react-icons/fa'
+import Cards from '../Cards'
 import rabbit from '../../assets/images/rabbit.svg'
 import turtle from '../../assets/images/turtle.svg'
 import SpeakerPhrase from '../SpeakerPhrase'
@@ -27,16 +28,9 @@ const Demo = () => {
 
   return (
     <>
+      <Cards />
       <div className="demo-wrapper" style={{fontSize: `${fontSize}px`}}>
         <div className="toolbar-wrapper">
-          <button
-            type="button"
-            className="control"
-            onClick={() => setFontSize(fontSize - 1)}
-          >
-            <FaArrowLeft className="icon" size={32} />
-          </button>
-
           <div className="toolbar-inner">
             <div className="toolbar-group">
               <button
@@ -64,14 +58,6 @@ const Demo = () => {
               </div>
             </div>
           </div>
-
-          <button
-            type="button"
-            className="control"
-            onClick={() => setFontSize(fontSize - 1)}
-          >
-            <FaArrowRight className="icon" size={32} />
-          </button>
         </div>
 
         <div className="speakerphrase-section">

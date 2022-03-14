@@ -1,0 +1,77 @@
+@import '../../scss/variables';
+
+$card-height: 160px;
+
+$card-image-size:60px;
+
+.card-wrapper {
+  height: $card-height;
+  width: $card-height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin: 0 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  .card-title {
+    height: 40px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    line-height: 1.2em;
+  }
+  .card-author {
+    text-align: center;
+    font-family: $font-sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 130%;
+    height: 20px;
+  }
+  .card-image {
+    height: $card-image-size;
+  }
+}
+
+/*---------- Colors-----------*/
+
+.card-wrapper {
+  background: #f5f5f5;
+  &:hover {
+    background: $hover-color;
+  }
+  .card-title {
+    color: #555;
+  }
+  .card-author {
+    color: #555;
+  }
+  .card-image {
+  }
+  &:active {
+    background: $background-color-active;
+    .card-title {
+      color: #fff;
+    }
+    .card-author {
+      color: #fff;
+    }
+  }
+}
+/*---------- Colors-----------*/
+
+// .card-wrapper {
+//   background: red;
+//   .card-title {
+//     background: gold;
+//   }
+//   .card-author {
+//     background: blue;
+//   }
+// }

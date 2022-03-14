@@ -1,0 +1,73 @@
+@import '../../scss/variables';
+
+$card-row-height: 160px;
+
+.card-row-outer {
+  height: $card-row-height;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  .card-row-endcap {
+    position: absolute;
+    height: $card-row-height;
+    width: 110px;
+    padding:0;
+    display: flex;
+    align-items: center;
+    &.left {
+      left: 0;
+      justify-content: flex-start;
+    }
+    &.right {
+      right: 0;
+      justify-content: flex-end;
+    }
+  }
+  .card-row-inner {
+    height: $card-row-height;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+/*---------- Colors-----------*/
+
+.card-row-outer {
+  // background: #fff;
+  .card-row-inner {
+    .card-row-endcap {
+      &.left {
+        background: linear-gradient(90deg, #ffffff 50%,#ffffff00);
+      }
+      &.right {
+        background: linear-gradient(90deg, #ffffff00, #ffffff  50% );
+      }
+      .arrow {
+        border: none;
+        background: transparent;
+      }
+    }
+  }
+}
+
+/*---------- Colors-----------*/
+
+// .card-row-outer {
+//   background: red;
+//   .card-row-endcap {
+//     &.left {
+//       background: green;
+//     }
+//     &.right {
+//       background: green;
+//     }
+//   }
+//   .card-row-inner {
+//     background: gold;
+//   }
+// }

@@ -20,6 +20,8 @@ $panel-dark-hover-color: darken($panel-dark-color, 2%);
 $background-color: white;
 $border-color: #cdcdcd;
 $background-color-hover: $hover-color;
+$background-color-active: #1967d2;
+
 
 /* ------- Buttons ---------*/
 
@@ -31,7 +33,7 @@ $control-color: $white;
 $control-icon-color: $accent-color;
 $control-icon-color-hover: #1967d2;
 $control-background-color: $white;
-$control-background-color-focus: #1967d2;
+$control-background-color-active: #1967d2;
 
 /* ------- HEADINGS ---------*/
 

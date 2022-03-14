@@ -29,7 +29,7 @@ $control-size: 60px;
   &:active {
     transform: scale(1.05);
     color: $white;
-    background: $control-background-color-focus;
+    background: $control-background-color-active;
   }
 }
 
