@@ -1,4 +1,4 @@
-import React, {createContext} from 'react'
+import {useState} from 'react'
 import {HiMicrophone, HiVolumeUp} from 'react-icons/hi'
 import './index.scss'
 
@@ -16,7 +16,7 @@ const story = [
   {
     id: 2,
     phrase: 'It was my Grandpa. I showed him my room.',
-    item: 'https://cdn-icons-png.flaticon.com/512/76/76663.png',
+    image: 'https://cdn-icons-png.flaticon.com/512/76/76663.png',
   },
   {
     id: 3,
@@ -34,20 +34,18 @@ const Phrase = () => (
   </div>
 )
 
-const PhraseItem = ({phrase, id}) => (
-  <>
-    <div className="phrase-wrapper">
-      <div className="phrase-textline">
-        {phrase.length &&
-          phrase.split(' ').map(val => (
-            <div key={id} className="phrase-word">
-              {val}
-            </div>
-          ))}
-      </div>
-      <PhrasePanel />
+const PhraseItem = ({phrase, id, fontSize}) => (
+  <div className="phrase-wrapper">
+    <div className="phrase-textline">
+      {phrase.length &&
+        phrase.split(' ').map(val => (
+          <div key={id} className="phrase-word" style={{fontSize: 22}}>
+            {val}
+          </div>
+        ))}
     </div>
-  </>
+    <PhrasePanel />
+  </div>
 )
 
 const PhrasePanel = () => (
