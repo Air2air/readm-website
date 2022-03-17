@@ -1,14 +1,14 @@
 @import '../../scss/_variables.scss';
 
-$demo-height: 500px;
+$reader-height: 500px;
 
-.demo-wrapper {
+.reader-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: $demo-height;
-  .speakerphrase-section {
+  height: $reader-height;
+  .phrase-section {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,9 +16,9 @@ $demo-height: 500px;
   }
 }
 
-// .demo-wrapper {
+// .reader-wrapper {
 //   background: blue;
-//   .speakerphrase-section {
+//   .phrase-section {
 //     background: red;
 //   }
 // }

@@ -1,6 +1,5 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {HashRouter as Router, Routes, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
-import Banner from './components/Banner'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'

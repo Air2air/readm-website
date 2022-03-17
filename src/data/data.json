@@ -13,7 +13,7 @@ module.exports = {
             href: '//readm-project.firebaseapp.com/',
           },
         },
-        speakerphrase: {
+        phrase: {
           line1: {
             text: 'Read It Well',
           },

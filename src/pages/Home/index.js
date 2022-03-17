@@ -1,9 +1,9 @@
-import Demo from '../../components/Demo'
+import Reader from '../../components/Reader'
 import './index.scss'
 
 const Home = () => (
   <div className="container">
-    <Demo />
+    <Reader />
   </div>
 )
 

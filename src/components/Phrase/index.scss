@@ -1,10 +1,10 @@
 @import '../../scss/variables';
 
-$speakerphrase-height: 60px;
+$phrase-height: 60px;
 $word-size: 1.4em;
 
-.speakerphrase-wrapper {
-  min-height: $speakerphrase-height;
+.phrase-wrapper {
+  min-height: $phrase-height;
   height: auto;
   width: 100%;
   padding: 10px 0;
@@ -12,8 +12,8 @@ $word-size: 1.4em;
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid $border-color;
-  .speakerphrase-textline {
-    min-height: $speakerphrase-height;
+  .phrase-textline {
+    min-height: $phrase-height;
     width: 80%;
     max-width: 80%;
     padding-left: 10px;
@@ -21,7 +21,7 @@ $word-size: 1.4em;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    .speakerphrase-word {
+    .phrase-word {
       font-family: $font-serif;
       font-weight: 700;
       display: flex;
@@ -32,7 +32,7 @@ $word-size: 1.4em;
       cursor: pointer;
     }
   }
-  .speakerphrase-control-row {
+  .phrase-control-row {
     width: 20%;
     height: 100%;
     display: flex;
@@ -44,10 +44,10 @@ $word-size: 1.4em;
   }
 }
 
-.speakerphrase-wrapper {
+.phrase-wrapper {
   transition: all 0.3s;
-  .speakerphrase-textline {
-    .speakerphrase-word {
+  .phrase-textline {
+    .phrase-word {
       transform: scale(1);
       &:hover {
         transform: scale(1.08);
@@ -56,14 +56,14 @@ $word-size: 1.4em;
   }
 }
 
-.speakerphrase-wrapper {
+.phrase-wrapper {
   border-bottom: 2px solid $border-color;
-  .speakerphrase-textline {
+  .phrase-textline {
  
-    &:hover .speakerphrase-word:not(:hover) {
+    &:hover .phrase-word:not(:hover) {
       background: $background-color-hover;
     }
-    .speakerphrase-word {
+    .phrase-word {
       color: #555;
       transition: all 0.3s;
       &:hover {
@@ -75,19 +75,19 @@ $word-size: 1.4em;
       }
     }
   }
-  .speakerphrase-control-row {
+  .phrase-control-row {
   }
 }
 
-// .speakerphrase-wrapper {
+// .phrase-wrapper {
 //   background: red;
-//   .speakerphrase-textline {
+//   .phrase-textline {
 //     background: gold;
-//     .speakerphrase-word {
+//     .phrase-word {
 //       background: green;
 //     }
 //   }
-//   .speakerphrase-control-row {
+//   .phrase-control-row {
 //     background: lightblue;
 //   }
 // }

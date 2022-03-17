@@ -2,7 +2,7 @@
 
 $card-height: 160px;
 
-$card-image-size:60px;
+$card-image-size: 60px;
 
 .card-wrapper {
   height: $card-height;
@@ -22,7 +22,7 @@ $card-image-size:60px;
     align-items: center;
     justify-content: center;
     font-family: $font-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.1em;
     line-height: 1.2em;
   }
